@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MiShop Registro</title>
-        <link rel="shortcut icon" href="img/MiShop.png" type="image/x-icon">
-        <link rel="stylesheet" href="estilos.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiShop Registro</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="shortcut icon" href="img/MiShop.png" type="image/x-icon">
+    <!-- Fuente letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,800&display=swap" rel="stylesheet">
-    </head>
-
+</head>
 <body class="pagina2">
     <nav id="navegacion">
-        <ul>
-           <li><button  id="btn_registroDeUsuarios" type="button" class="boton"><a  id="“a_registroDeUsuarios" href="registro.html">Registrarse</a></button></li>
-            <a href="index.html" class="logo"><img src="img/1.png" alt="Logo de MiShop" width="80" height="80" id="logo"></a>       
-        </ul>
+        <img src="./img/1.png" alt="Logo de MiShop" id="logo">
+        <a href="./index.html" id="inicio" target="_blank">Inicio</a>
     </nav>
-
+    <h2 class="titulo_2">Formulario de registro</h2>
     <form action="" id="registrar_usuario_form" method="POST">
     <div class="form">
-        <h2 class="titulo_2">Formulario de registro</h2>
-        <fieldset>
-            <div class="grupo">
-            <input type="text" id="nombre_usuario" required><span class="barra"></span>
-            <label for="">Usuario</label>
-            </div>
-            <div class="grupo">
-            <input type="number" id="anoNacimiento_usuario" required min="1900" max="2021"><span class="barra"></span>
-            <label for="">Año de nacimiento</label>
-            </div>
-            <div class="grupo">
-            <input type="password" name="" id="contrasena_usuario" required><span class="barra"></span>
-            <label for="">Contraseña</label>
-            </div>
-        </fieldset>
+        <div class="grupo">
+        <input type="text" id="nombre_usuario" required><span class="barra"></span>
+        <label for="">Usuario</label>
+        </div>
+        <div class="grupo">
+        <input type="number" id="anoNacimiento_usuario" required min="1900" max="2021"><span class="barra"></span>
+        <label for="">Año de nacimiento</label>
+        </div>
+        <div class="grupo">
+        <input type="password" name="" id="contrasena_usuario" required><span class="barra"></span>
+        <label for="">Contraseña</label>
+        </div>
         <button id="enviar_registro" type="submit">Enviar registro</button>
     </div>
     </form>
-
 </body>
 </html>
