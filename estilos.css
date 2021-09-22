@@ -36,13 +36,13 @@ header.textos-header{
 }
 .textos-header h1{
     padding-top: 120px;
-    font-size: 7.5vw;
+    font-size: 50px;
     color: black;
     font-family:'Poppins', sans-serif;
     text-align: center;
 }
 .textos-header h2{
-    font-size: 3.5vw;
+    font-size: 30px;
     color: #333333;
     font-weight: 300;
     font-family: 'Poppins', sans-serif;
