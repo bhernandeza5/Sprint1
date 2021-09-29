@@ -2,6 +2,16 @@
 let registros = [];
 
 // - - - - - FUNCIONES SPRINT 2- - - - -
+function validacion(){  //Función principal
+    // Asignación de variables con los valores obtenidos en el formulario
+    var nombreUsuario = document.getElementById('nombre_usuario').value;
+    var anoNacimientoUsuario = document.getElementById('anoNacimiento_usuario').value;
+    var contrasenaUsuario = document.getElementById('contrasena_usuario').value;
+    validar_nombre_usuario(nombreUsuario);
+    validar_anoNacimiento_usuario(anoNacimientoUsuario);
+    validar_contrasena(contrasenaUsuario);
+}
+
 function validar_nombre_usuario(string) {
 	//VARIABLES
 	var validacion = true;
@@ -9,11 +19,11 @@ function validar_nombre_usuario(string) {
 	var validar_nombre = /^[A-Z][A-Za-z]+$/		// Acepta que la primer letra sea mayuscula, pero también que hayan otras matusculas en el nombre
 	//COMPROBACIÓN NOMBRE
 	if (validar_nombre.test(nombre)  ) {
-		alert(validacion+" = "+nombre);
+		alert("Nombre: " + nombre + " is \"" + validacion + "\"");
 	}
 	else{
 		validacion=false;
-		alert(validacion+" = "+nombre);
+		alert("Nombre: " + nombre + " is \"" + validacion + "\"");
 	}
 	return validacion;
 }
@@ -27,16 +37,16 @@ function validar_anoNacimiento_usuario(valor) {
 	// COMPROBACIÓN AÑO DE NACIMIENTO
 	if (validar_fecha.test(fecha_nacimiento)  ) {
 		if(fecha_nacimiento>=1900 && fecha_nacimiento < 2022){
-			alert(validacion+" = "+fecha_nacimiento);
+			alert("Año de nacimiento: " + fecha_nacimiento + " is \"" + validacion + "\"");
 		}
 		else{
 			validacion=false;
-		alert(validacion+" = "+fecha_nacimiento);
+			alert("Año de nacimiento: " + fecha_nacimiento + " is \"" + validacion + "\"");
 		}
 	}
 	else{
 		validacion=false;
-		alert(validacion+" = "+fecha_nacimiento);
+		alert("Año de nacimiento: " + fecha_nacimiento + " is \"" + validacion + "\"");
 	}
 	return validacion;
 }
@@ -48,11 +58,11 @@ function validar_contrasena(stringt) {
 	var validar_password = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,}$/		// Expresión Regular
 	// COMPROBACIÓN PASSWORD
 	if (validar_password.test(password)  ) {
-		alert(validacion+" = "+password);
+		alert("Contraseña: " + password + " is \"" + validacion + "\"");
 	}
 	else{
 		validacion=false;
-		alert(validacion+" = "+password);
+		alert("Contraseña: " + password + " is \"" + validacion + "\"");;
 	}
 	return validacion;
 }
