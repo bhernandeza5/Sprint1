@@ -1,6 +1,9 @@
 // - - - - - ARREGLOS - - - - -
 let registros = [];
 
+//- - - - - VARIABLES GLOBALES - - - - -
+var cont_true_datos = 0;	//Cada vez que un dato sea true, se sumara en el contador para una validación final
+
 // - - - - - FUNCIONES SPRINT 2- - - - -
 function validacion(){  //Función Principal
     // Asignación de variables con los valores obtenidos en el formulario
@@ -10,8 +13,14 @@ function validacion(){  //Función Principal
     var contrasenaUsuario = document.getElementById('contrasena_usuario').value;
 	// Cada validación de cada campo se encarga de poner en false o true el formulario!
     validacion_final = validar_nombre_usuario(nombreUsuario);
+	console.log(typeof(validacion_final));
+
     validacion_final = validar_anoNacimiento_usuario(anoNacimientoUsuario);
+	console.log(typeof(validacion_final));
+
     validacion_final = validar_contrasena(contrasenaUsuario);
+	console.log(typeof(validacion_final));
+	
 	return validacion_final;
 }
 
@@ -22,6 +31,7 @@ function validar_nombre_usuario(string) {
 	var validar_nombre = /^[A-Z][A-Za-z]+$/		// Acepta que la primer letra sea mayuscula, pero también que hayan otras matusculas en el nombre
 	//COMPROBACIÓN NOMBRE
 	if (validar_nombre.test(nombre)  ) {
+		cont_true_datos++;
 		alert("Nombre: " + nombre + " is \"" + validacion + "\"");	// Se puede borrar, esta solo para una mejor comprensión visual
 	}
 	else{
@@ -39,6 +49,7 @@ function validar_anoNacimiento_usuario(valor) {
 	// COMPROBACIÓN AÑO DE NACIMIENTO
 	if (validar_fecha.test(fecha_nacimiento)  ) {
 		if(fecha_nacimiento>=1900 && fecha_nacimiento < 2022){
+			cont_true_datos++;
 			alert("Año de nacimiento: " + fecha_nacimiento + " is \"" + validacion + "\"");	// Se puede borrar, esta solo para una mejor comprensión visual
 		}
 		else{
@@ -60,6 +71,7 @@ function validar_contrasena(stringt) {
 	var validar_password = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,}$/		// Expresión Regular
 	// COMPROBACIÓN PASSWORD
 	if (validar_password.test(password)  ) {
+		cont_true_datos++;
 		alert("Contraseña: " + password + " is \"" + validacion + "\"");	// Se puede borrar, esta solo para una mejor comprensión visual
 	}
 	else{
@@ -74,14 +86,16 @@ function validar_contrasena(stringt) {
 function agregarRegistro() {
 	// body...
 	var validaciones = validacion();
-	if(validaciones==true){
+	if(cont_true_datos==3){	//Sí los tres campos son correctos se agregarán al array
 		var nombreUsuario = document.getElementById('nombre_usuario').value;
 		var anoNacimientoUsuario = document.getElementById('anoNacimiento_usuario').value;
 		var contrasenaUsuario = document.getElementById('contrasena_usuario').value;
 		let cliente = [nombreUsuario,anoNacimientoUsuario,contrasenaUsuario];
 		Array.prototype.push.apply(registros,[cliente]);	// De esta manera se agrega al array ppal los datos del nuevo cliente
 		alert("Registros = "+registros);	// Se puede eliminar
+		cont_true_datos=0;	// Se vuelve a reiniciar el contador para analizar el sgte dato
 	}
+	cont_true_datos=0;
 }
 
 function EncontrarUsuarioPorEdad(arreglo){
