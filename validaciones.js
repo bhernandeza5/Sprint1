@@ -13,14 +13,8 @@ function validacion(){  //Función Principal
     var contrasenaUsuario = document.getElementById('contrasena_usuario').value;
 	// Cada validación de cada campo se encarga de poner en false o true el formulario!
     validacion_final = validar_nombre_usuario(nombreUsuario);
-	console.log(typeof(validacion_final));
-
     validacion_final = validar_anoNacimiento_usuario(anoNacimientoUsuario);
-	console.log(typeof(validacion_final));
-
     validacion_final = validar_contrasena(contrasenaUsuario);
-	console.log(typeof(validacion_final));
-	
 	return validacion_final;
 }
 
@@ -33,8 +27,7 @@ function validar_nombre_usuario(string) {
 	if (validar_nombre.test(nombre)  ) {
 		cont_true_datos++;
 		alert("Nombre: " + nombre + " is \"" + validacion + "\"");	// Se puede borrar, esta solo para una mejor comprensión visual
-	}
-	else{
+	}else{
 		validacion=false;
 		alert("Nombre: " + nombre + " is \"" + validacion + "\"");	// Se puede borrar, esta solo para una mejor comprensión visual
 	}
@@ -51,13 +44,11 @@ function validar_anoNacimiento_usuario(valor) {
 		if(fecha_nacimiento>=1900 && fecha_nacimiento < 2022){
 			cont_true_datos++;
 			alert("Año de nacimiento: " + fecha_nacimiento + " is \"" + validacion + "\"");	// Se puede borrar, esta solo para una mejor comprensión visual
-		}
-		else{
+		}else{
 			validacion=false;
 			alert("Año de nacimiento: " + fecha_nacimiento + " is \"" + validacion + "\"");	// Se puede borrar, esta solo para una mejor comprensión visual
 		}
-	}
-	else{
+	}else{
 		validacion=false;
 		alert("Año de nacimiento: " + fecha_nacimiento + " is \"" + validacion + "\"");	// Se puede borrar, esta solo para una mejor comprensión visual
 	}
@@ -73,8 +64,7 @@ function validar_contrasena(stringt) {
 	if (validar_password.test(password)  ) {
 		cont_true_datos++;
 		alert("Contraseña: " + password + " is \"" + validacion + "\"");	// Se puede borrar, esta solo para una mejor comprensión visual
-	}
-	else{
+	}else{
 		validacion=false;
 		alert("Contraseña: " + password + " is \"" + validacion + "\"");	// Se puede borrar, esta solo para una mejor comprensión visual
 	}
