@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENSAYO</title>
+    <link rel="stylesheet" href="./3estilos.css">
+    <link rel="shortcut icon" href="./img/1.png" type="image/x-icon">
+    <!-- Fuente letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,800&display=swap" rel="stylesheet">
+    
+</head>
+<body class="pagina2">
+    <nav id="navegacion">
+        <img src="./img/1.png" alt="Logo de MiShop" id="logo">
+        <a href="./index.html" id="inicio">Inicio</a>
+    </nav>
+    <h2 class="titulo_2">Formulario de registro </h2>
+    
+    <!--FORMULARIO-->
+    <form  class="registrar_usuario_form" action="" id="registrar_usuario_form" >
+        
+        <div class="formulario" id="formulario">
+            
+            <!--USUARIO-->
+            <div class="formulario__grupo" id="grupo__usuario">
+                <div class="formulario__grupo_input" id="formulario__grupo_input">
+                    <input class="formulario__input" type="text" id="nombre_usuario" name="nombre_usuario" >
+                    <span class="barra"></span>
+                    <i class="formulario__validacion_estado fas fa-times-circle"></i>
+                    <label for="nombre_usuario" class="formulario__label">Usuario</label>
+                </div>
+                <p class="formulario__input_error">El usuario debe de empezar en Mayúscula y tener entre 3 y 20 digítos</p>
+                
+            </div>
+
+            <!--NOMBRE-->
+            <div class="formulario__grupo"id="grupo__nombre">
+                <div class="formulario__grupo_input" id="formulario__grupo_input">
+                    <input class="formulario__input" type="text" id="nombre" name="nombre" ><span class="barra"></span>
+                    <i class="formulario__validacion_estado fas fa-times-circle"></i>
+                    <label for="" class="formulario__label">Nombre </label>
+                </div>
+                <p class="formulario__input_error">El nombre debe de empezar en Mayúscula y tener entre 3 y 20 digítos</p>
+                
+            </div>
+
+            <!--APELLIDOS-->
+            <div class="formulario__grupo" id="grupo__apellido">
+                <div class="formulario__grupo_input" id="formulario__grupo_input">
+                    <input class="formulario__input" type="text" id="apellido" name="apellido" ><span class="barra"></span>
+                    <i class="formulario__validacion_estado fas fa-times-circle"></i>
+                    <label for="" class="formulario__label">Apellidos</label>
+                </div>
+                <p class="formulario__input_error">El apellido debe de empezar en Mayúscula y tener entre 3 y 20 digítos</p>
+            </div>
+
+            <!--CORREO ELECTRÓNICO-->
+            <div class="formulario__grupo" id="grupo__correo">
+                <div class="formulario__grupo_input" id="formulario__grupo_input">
+                    <input class="formulario__input" type="email" id="correo_Electronico" name="correo_Electronico" autocomplete="current-email" ><span class="barra"></span>
+                    <i class="formulario__validacion_estado fas fa-times-circle"></i>
+                    <label for="" class="formulario__label">Email</label>
+                </div>
+                <p class="formulario__input_error">Error de correo electrónico</p>
+            </div>
+
+            <!--TELÉFONO-->
+            <div class="formulario__grupo" id="grupo__telefono">
+                <div class="formulario__grupo_input" id="formulario__grupo_input">
+                    <input class="formulario__input" type="number" id="telefono" name="telefono" maxlength="10" ><span class="barra"></span>
+                    <i class="formulario__validacion_estado fas fa-times-circle"></i>
+                    <label for="" class="formulario__label">Teléfono</label>
+                </div>
+                <p class="formulario__input_error">Solo acepta número de máximo 10 dígitos</p>
+            </div>
+
+            <!--AÑO NACIMIENTO-->
+            <div class="formulario__grupo" id="grupo__nacimiento">
+                <div class="formulario__grupo_input" id="formulario__grupo_input">
+                    <input class="formulario__input" type="number" id="anoNacimiento_usuario" name="anoNacimiento_usuario"  min="1900" max="2021"><span class="barra"></span>
+                    <i class="formulario__validacion_estado fas fa-times-circle"></i>
+                    <label for="" class="formulario__label">Año de nacimiento</label>
+                </div>
+                <p class="formulario__input_error">Años entre 1900 - 2021</p>
+            </div>
+
+            <!--PASSWORD-->
+            <div class="formulario__grupo" id="grupo__password">
+                <div class="formulario__grupo_input" id="formulario__grupo_input">
+                    <input type="password" class="formulario__input"  name="contrasena_usuario" id="contrasena_usuario" autocomplete="current-password" placeholder="Contraseña" ><span class="barra"></span>
+                    <i class="formulario__validacion_estado fas fa-times-circle"></i>
+                    <!-- <label for="" class="formulario__label">Contraseña</label> -->
+                </div>
+                <p class="formulario__input_error">Mínimo 1 mayúscula, 1 minúscula, 1 número y mínimo 6 dígitos</p>
+            </div>
+
+
+
+            <!--VERIFICACION PASSWORD-->
+            <div class="formulario__grupo" id="grupo__password2">
+                <div class="formulario__grupo_input" id="formulario__grupo_input">
+                    <input type="password" class="formulario__input" name="password2"  id="password2" autocomplete="current-password" placeholder="Repetir Contraseña" ><span class="barra"></span>
+                    <i class="formulario__validacion_estado fas fa-times-circle"></i>
+                    <!-- <label for="" class="formulario__label">Repetir Contraseña </label> -->
+                </div>
+                <p class="formulario__input_error">Error de contraseña</p>
+            </div>
+            
+
+            <!--ACEPTO TERMINOS Y CONDICIONES-->
+            <div class="formulario__grupo_terminos" id="grupo__terminos">
+                <input class="formulario__checkbox" type="checkbox" id="terminos" name="terminos" >
+                <a class="texto_terminos_y_condiciones" href="./terminosycondiciones.html" target="_blank">
+                    Acepto términos y condiciones</a>
+                <span class="barra"></span>
+                <label class="formulario__label"> </label>
+            </div>
+
+            
+
+            <!--FORMULARIO MENSAJE-->
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="fas fa-exclamation-triangle"></i><b> Error: </b>Por favor complete el formulario correctamente</p>
+                <label for=""></label>
+            </div>
+            
+            <!--BOTON NUEVO USUARIO-->
+            <!-- <button class="enviarFormulario" id="enviar_registro" type="button" onClick='agregarRegistro();'>Agregar Usuario</button> -->
+            
+            <!--BOTON ENVIAR FORMULARIO-->
+            <div class="formulario__grupo formulario__grupo_btn_enviar">
+                <button type="submit" class="enviarFormulario"  onclick="">Finalizar Registro</button>
+                <p class="formulario__mensaje_exito" id="formulario__mensaje_exito" >El formulario se ha guardado y enviado exitosamente </p>
+                
+            </div>            
+        </div>
+        
+    </form>
+    <script src="3validaciones.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>
